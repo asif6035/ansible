@@ -6,17 +6,20 @@
             apt:
                     update_cache: yes
 
-          - name: Remove apache2 package
+          - name: Remove apache2, PHP and MariaDB package
             apt:
-                    name: apache2
+                    name: 
+                      - apache2
+                      - libapache2-mod-php
+                      - mariadb-server
                     state: absent
-           
-          - name: Remove php Support for apache2
-            apt:
-                    name: libapache2-mod-php
-                    state: absent    
-
-          - name: Remove MariaDB Package
-            apt:
-                    name: mariadb-server
-                    state: absent         
+#           
+#          - name: Remove php Support for apache2
+#            apt:
+#                    name: libapache2-mod-php
+#                    state: absent    
+#
+#          - name: Remove MariaDB Package
+#            apt:
+#                    name: mariadb-server
+#                    state: absent         

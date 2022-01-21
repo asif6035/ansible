@@ -9,8 +9,8 @@
 
 - hosts: web_servers
   tasks:
-          - name: Install Apache2 and PHP package at Webserver
-            apt:
+          - name: Install Apache2, PHP package at Webserver.
+            package:
                     name:
                             - apache2
                             - libapache2-mod-php
@@ -20,7 +20,7 @@
 - hosts: db_servers
   tasks:
 
-          - name: MariaDB package Installation
+          - name: MariaDB package Installation at Database Server.
             apt:
                     name: mariadb-server
                     state: latest
