@@ -1,16 +1,28 @@
 ---
 
 - hosts: all
-  tasks:
-          - name: update Repository index
+  pre_tasks:
+          - name: Update Repository index
             apt:
+                    upgrade: dist
                     update_cache: yes
 
-          - name: install Apache2 and PHP package
+- hosts: web_servers
+  tasks:
+          - name: Install Apache2 and PHP package at Webserver
             apt:
                     name:
                             - apache2
                             - libapache2-mod-php
+                    state: latest
+            when: ansible_distribution == "Ubuntu"
+
+- hosts: db_servers
+  tasks:
+
+          - name: MariaDB package Installation
+            apt:
+                    name: mariadb-server
                     state: latest
            
 #           - name: Add php Support for apache2
