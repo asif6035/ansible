@@ -17,6 +17,15 @@
                     state: latest
             when: ansible_distribution == "Ubuntu"
 
+          - name: copy html file for site
+            copy:
+                    src: hello.html
+                    dest: /var/www/html/index.html
+                    owner: root
+                    group: root
+                    mode: 0644
+
+
 - hosts: db_servers
   tasks:
 
@@ -25,6 +34,13 @@
                     name: mariadb-server
                     state: latest
            
+- hosts: local
+  tasks:
+
+          - name: Nginx package Installation at localhost Server.
+            apt:
+                    name: nginx
+                    state: latest
 #           - name: Add php Support for apache2
 #            apt:
 #                    name: libapache2-mod-php
