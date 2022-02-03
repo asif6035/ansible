@@ -1,0 +1,4 @@
+[Kamen_Webatschool]
+37.24.82.186
+ansible_user=kne-admin
+jumper ansible_port=23233

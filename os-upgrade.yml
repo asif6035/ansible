@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  tasks:
+          - name: Update Kamen Webatschool
+          - become: true
+            #          - gather_facts: false
+            apt:
+                    upgrade: dist
+                    update_cache: yes

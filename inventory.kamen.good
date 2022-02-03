@@ -1,15 +1,7 @@
-[kamen_FNR]
+[kamen_webatschool]
 37.24.83.2 ansible_user=kne-admin ansible_port=23233
 37.24.82.186 ansible_user=kne-admin ansible_port=23233
-
-[kamen_GSK]
 37.24.82.170 ansible_user=kne-admin ansible_port=23233
 37.24.82.178 ansible_user=kne-admin ansible_port=23233
-
-[kamen_GYM]
 78.94.182.10 ansible_user=kne-admin ansible_port=23233
 78.94.181.50 ansible_user=kne-admin ansible_port=23233
-
-[kamen_HSK]
-78.94.176.58 ansible_user=kne-admin ansible_port=23233
-78.94.176.138 ansible_user=kne-admin ansible_port=23233

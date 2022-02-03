@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+          - name: Update Repository index
+            apt:
+                    upgrade: dist
+                    update_cache: yes
+                    autoremove: yes
+
