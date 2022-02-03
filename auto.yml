@@ -5,7 +5,8 @@
   tasks:
           - name: Update Repository index
             apt:
-                    upgrade: dist
                     update_cache: yes
+                    upgrade: dist
                     autoremove: yes
+                    autoclean: yes
 
